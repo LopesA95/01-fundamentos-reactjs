@@ -2,10 +2,11 @@ import styles from './Comment.module.css';
 
 import { ThumbsUp, Trash } from 'phosphor-react';
 
-export function Comment({ content }) {
+export function Comment({ content, onDeleteComment }) {
 
   function handleDeleteComment() {
-    console.log('delete comment')
+
+    onDeleteComment(content)
   }
 
   return (
